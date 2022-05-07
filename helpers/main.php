@@ -1,5 +1,5 @@
 <?php
-//function for get base path
+//function for get base path div
 $basePath = 'http://localhost/tugas-perpustakaan/';
 
 function base_path()
