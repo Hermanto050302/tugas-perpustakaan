@@ -1,0 +1,81 @@
+fitur
+-login & register
+
+role
+-pengguna
+	-bisa melihat katalog
+
+-mahasiswa
+	-semua fitur user
+	-bisa melihat buku digital
+	-bisa melakukan daftar
+	-bisa meminjam (melihat buku yang dipinjam)
+	-melihat denda
+	-melihat waktu pengembalian
+	-melakukan pembayaran
+	-konfirmasi pembayaran
+	-history peminjaman
+
+-staf
+	-mengelola data buku
+	-mengelola data mahasiswa
+	-mengelola data peminjaman
+	-mengelola data pembayaran
+
+
+
+database
+//semua tabel wajib kolom created_at
+-tb_mahasiswa 
+	id|int|100
+	email|varchar|100
+	password|text|---
+	nim|varchar|10
+ 	nama|varchar|100
+ 	prodi|enum/varchar|3
+	angkatan|varchar|4
+	no_telp|varchar|20
+	alamat|text|---
+
+-tb_staf
+	id|int|100
+	email|varchar|100
+	password|text|---
+	nama|varchar|100
+	nik|varchar|20
+
+-tb_buku
+	id|int|100
+	judul|varchar|100
+	nama_penulis|varchar|100
+	penerbit|varchar|100
+	tahun_terbit|varchar|4
+	isbn|varchar|50
+	klasifikasi|varchar|100
+	warna_label|varchar|10
+	bahasa|varchar|20
+	deskripsi|text|---
+	foto_cover|text|---
+	file|text|---
+	stok|int|3
+
+-tb_peminjaman
+    id|int|100
+    id_buku|int|100
+    id_mahasiswa|int|100
+    id_staf|int|100
+    tanggal_peminjaman|date|---
+    tanggal_pengembalian|date|---
+    status|enum|--
+    
+  -tb_denda
+	id|int|100
+	id_peminjaman|int|100
+	tanggal_denda|date|---
+	tanggal_bayar|date|---
+	jumlah_bayar|int|10
+	bukti_bayar|text|---
+	status|enum|--
+
+
+link icon : https://fontawesome.com/v5/search
