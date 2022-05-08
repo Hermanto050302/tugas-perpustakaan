@@ -1,8 +1,10 @@
 <?php 
 include 'helpers/main.php';
-include 'components/_header.php';
-include 'components/_sidebar.php'; 
-//test
+// include 'components/_header.php';
+// include 'components/_sidebar.php'; 
+
+
+dd(check_password('hermanto','$2y$12$u8M6Mwr5TWCmW3SB1rnq/enPmjpk5TdaJkfQv3.yrgQ2uBGASujLa'));
 ?>
 
 <div class="content-wrapper">
